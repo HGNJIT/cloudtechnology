@@ -10,10 +10,10 @@ By:
 
 Links:
 <ul>
-AFS
+AFS:
 https://web.njit.edu/~heg2/cloudtechnology/docs/index.html
 </ul>
 <ul>
-GitHub
+GitHub:
 https://hgnjit.github.io/cloudtechnology/
 </ul>
