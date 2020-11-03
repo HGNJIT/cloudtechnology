@@ -11,7 +11,7 @@ By:
 Links:
 <ul>
 AFS
-
+https://web.njit.edu/~heg2/cloudtechnology/docs/index.html
 GitHub
-    
+https://hgnjit.github.io/cloudtechnology/
 </ul>
