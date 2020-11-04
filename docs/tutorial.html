@@ -74,7 +74,7 @@
                 <li>
                     Register a Docker ID on Docker Hub.<br>
                     <a type="button" class="btn btn-outline-primary btn-sm"
-                       href="hub.docker.com">Register ID
+                       href="https://www.docker.com/products/docker-hub" target="_blank">Register ID
                     </a>
                 </li>
                 <li>
@@ -83,43 +83,150 @@
             </ol>
             </p>
             <h5 class="ml-3">
-                Creating a Docker Repository:
+                Setup and Updates:
             </h5>
             <p>
             <ol>
                 <li>
                     Open a "Terminal" by going to the Start Menu and typing "cmd". Click Enter to run the Command Prompt
-                    App
+                    App.
+                    <ul>
+                        <li>
+                            Test that Docker is working by running a "docker run hello-world" Command.
+                        </li>
+                    </ul>
                 </li>
-                <ul>
-                    <li>
-                        Test that Docker is working by running a "docker run hello-world" command.
-                    </li>
-                </ul>
                 <li>
                     Pull the Ubuntu image, which contains the set of instructions needed for creating a container, by
-                    running the "docker run -it ubuntu:latest /bin/bash" command.
+                    running the "docker run -it ubuntu:latest /bin/bash" Command.
+                    <ul>
+                        <li>
+                            Note the Container ID name which is displayed, for future use.
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    Download and update the latest packages for the repositories to get information on the newest versions of packages and their dependencies                </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
+                    Download and update the latest packages for the repositories to get information on the newest
+                    versions of packages and their dependencies by running the "apt-get update" Command.
+                </li>
+                <li>
+                    Download and install a text editor to be able to create and edit an HTML file by running the
+                    "apt-get install vim" Command.
+                </li>
+            </ol>
+            </p>
+            </p>
+            <h5 class="ml-3">
+                Create a new Docker Container:
+            </h5>
+            <p>
+            <ol>
+                <li>
+                    Open a "Terminal" by going to the Start Menu and typing "cmd". Click Enter to run the Command Prompt
+                    App.
+                </li>
+                <li>
+                    Check the available Containers by running the "docker ps -a" Command.
+                </li>
+                <li>
+                    Create a new Image by running the "docker commit
+                    <mark>Container ID</mark>
+                    <mark>Image Name</mark>
+                    ".<br>
+                    Replace
+                    <mark>Container ID</mark>
+                    with an available Container ID.<br>
+                    Replace
+                    <mark>Image Name</mark>
+                    with the name of your new Image.
+                </li>
+                <li>
+                    Check that your new Image was properly created by running the "docker images" Command.
+                    <ul>
+                        <li>
+                            You should see your new Image listed under Repository.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            </p>
+            </p>
+            <h5 class="ml-3">
+                Host a Webpage:
+            </h5>
+            <p>
+            <ol>
+                <li>
+                    Open a "Terminal" by going to the Start Menu and typing "cmd". Click Enter to run the Command Prompt
+                    App.
+                </li>
+                <li>
+                    Start a Host Shell and create a folder on your local drive to host a site by running the "docker run
+                    -it -p 127.0.0.1:80:80 -v
+                    <mark>Local Folder</mark>
+                    _dir:/var/www/html
+                    <mark>Image Name</mark>
+                    /bin/bash" Command.
+                    <br>
+                    Replace
+                    <mark>Local Folder</mark>
+                    with the location where you will be storing the html files.<br>
+                    Replace
+                    <mark>Image Name</mark>
+                    with the name of your Image.
+                </li>
+                <li>
+                    Start your Docker Container by running the "docker start
+                    <mark>Image Name</mark>
+                    " Command.
+                </li>
+                <li>
+                    Change the current directory so that you can save an HTML filed into the appropriate folder by
+                    running the "cd /var/www/html" Command.
+                    <ul>
+                        <li>
+                            Your Command Line should now show "root@
+                            <mark>Image Name</mark>
+                            : /var/www/html"
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Create a homepage by making an "index.html" file using the "vi index.html" Command.
+                </li>
+                <li>
+                    Edit the new HTML file by pressing the "i" keyboard key.
+                    <ul>
+                        <li>
+                            Once you enter Edit mode, you will see "--INSERT--" at the bottom of the screen.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    You can now enter the HTML code for your website.
+                    <ul>
+                        <li>
+                            Use this handy reference guide for useful shortcut commands.<br>
+                            <a type="button" class="btn btn-outline-primary btn-sm"
+                               href="http://www.atmos.albany.edu/daes/atmclasses/atm350/vi_cheat_sheet.pdf"
+                               target="_blank">Cheat Sheet
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Once you are done entering your HTML code, press the "ESC" key on your keyboard and type ":wq" to
+                    save the changes.
+                </li>
+                <li>
+                    Start the Web Service by using the "/etc/init.d/apache2 restart" Command.
+                    <ul>
+                        <li>
+                            Check that your page is being properly hosted by typing "127.0.0.1" into the address bar of
+                            a web browser.
+                        </li>
+                    </ul>
+                </li>
             </ol>
             </p>
 
