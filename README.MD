@@ -5,7 +5,7 @@ CS117 Project
 By:
 <ul>
 <li>Hannier Gil</li>
-<li>Sheharyar Khan</li>
+<li>Antoun Elkomos</li>
 </ul>
 
 Links:
