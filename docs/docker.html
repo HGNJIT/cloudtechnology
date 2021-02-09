@@ -29,7 +29,7 @@
         <div class="bg-dark">
             <ul class="nav justify-content-center sticky-top">
                 <li class="nav-item">
-                    <a class="nav-link text-white active" href="index.html">Home</a>
+                    <a class="nav-link text-white" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="virtualization.html">What is Virtualization</a>
@@ -38,7 +38,7 @@
                     <a class="nav-link text-white" href="datacenter.html">What is a Data Center</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><b>Kubernetes vs Docker</b></a>
+                    <a class="nav-link text-white active" href="#"><b>PyCharm Tutorial</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="tutorial.html">Docker Tutorial</a>
@@ -51,33 +51,68 @@
     <div class="row">
         <div class="col-8">
             <h1>
-                Kubernetes vs Docker:
+                PyCharm Tutorial:
             </h1>
+            <h5 class="ml-3">
+                Create a Project:
+            </h5>
             <p>
-                People often mistaken Docker and Kubernetes for being the same thing although they are two very
-                different things. Docker is a program that makes and runs containers it was created because when
-                developers would code something on their own computers and push it up for production, problems would
-                arise. Such as different operating systems, or different libraries on the different computers. But
-                containerization negated this problem, by basically having the code separate from the machine's
-                specifications its running on allowing it to run on a different computer.
+            <ol>
+                <li>
+                    In PyCharm, choose
+                    <mark>File</mark>
+                    ->
+                    <mark>New Project</mark>
+                    , click on
+                    <mark>Django</mark>
+                    , and follow the steps to create a project.
+                </li>
+                <li>
+                    Once the project is created, go to
+                    <mark>Preferences</mark>
+                    ->
+                    <mark>Project Interpreter</mark>
+                </li>
+                <li>
+                    Go to settings the right of Project Interpreter and select the Configure Remote Python Interpreter
+                    dialog, then click the Docker button.
+                </li>
+                <li>
+                    Click the menu dropdown for Machine Name and select default.
+                </li>
+                <li>
+                    Click the Images dropdown and choose
+                    <mark>minimum/docker-django-mysite:latest</mark>
+                    .
+                </li>
+            </ol>
             </p>
+            <h5 class="ml-3">
+                Run Django:
+            </h5>
             <p>
-                Kubernetes is not a containerization program rather it is the architect for containers. It help manage
-                the containers rather than actually making them. It shows if there are any errors in the container
-                and alerts the developer and also allows many different containers to work in sync.
-            </p>
-            <p>
-            </p>
+            <ol>
+                <li>
+                    Click <mark>Run</mark> -> <mark>Edit Configurations</mark> and select the PyCharm-generated Djano run configuration.
+                </li>
+                <li>
+                    In the Host field, enter <mark>0.0.0.0</mark> and click the Run button.
+                </li>
+                <li>
+                    Congratulations, you are now running a PyCharm Container.
+                </li>
+
         </div>
         <div class="col-4">
             <div class="card mt-3 ml-5 bg-dark" style="width: 15rem; position: fixed">
                 <div class="card-header text-center">
-                    <img  src="https://www.cbronline.com/wp-content/uploads/2018/02/docker-swarm-containers.png"
-                          width="200" height="200"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAB72I45xNWDwnpKcpY4WooNe8qCO3qbeWVA&usqp=CAU"
+                         width="200" height="200"
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent"><a href="https://www.ibm.com/cloud/blog/kubernetes-vs-docker" target="_blank">Learn more about
-                        Kubernetes vs Docker</a></li>
+                    <li class="list-group-item bg-transparent"><a
+                            href="https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html#prereq"
+                            target="_blank">PyCharm Tutorial</a></li>
                 </ul>
             </div>
         </div>
